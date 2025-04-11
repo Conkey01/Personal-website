@@ -97,6 +97,7 @@ section{
 .text-animate {
   position: relative;
   width: 80rem;
+  overflow: hidden;
 }
 
 .home-content .text-animate h3 {

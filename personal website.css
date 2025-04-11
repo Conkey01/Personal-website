@@ -107,7 +107,8 @@ section{
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  background-position: 0 0;
+  background-size: 90% 100%;
+  background-position: -100% -100%;
   animation: homeBgText 6s linear infinite;
   animation-delay: 2s;
 }
@@ -117,7 +118,7 @@ section{
   /*content: '';*/
   position: absolute;
   top: 0;
-  left: 1;
+  left: 0;
   width: 0;
   height: 100%;
   border-right: 2px solid var(--main-color);

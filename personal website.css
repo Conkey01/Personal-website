@@ -281,6 +281,8 @@ color: var(--bg-color);
 
 .portfolio-box img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   transition: .5s ease;
 }
 

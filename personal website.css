@@ -274,7 +274,7 @@ color: var(--bg-color);
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
-  height: 90%;
+  height: auto;
   width: 100%;
 }
 

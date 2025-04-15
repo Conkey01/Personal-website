@@ -274,9 +274,11 @@ color: var(--bg-color);
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
-  height: auto;
+  height: 25rem;
   flex-direction: column;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-box img {
@@ -286,9 +288,9 @@ color: var(--bg-color);
   transition: .5s ease;
 }
 
-/*.portfolio-box:hover img {
+.portfolio-box:hover img {
   transform: scale(1.1);
-}*/
+}
 
 .portfolio-box .portfolio-layer {
   position: absolute;

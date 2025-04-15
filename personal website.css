@@ -307,9 +307,9 @@ color: var(--bg-color);
   transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer {
+/*.portfolio-box:hover .portfolio-layer {
   transform: translateY(0);
-}
+}*/
 
 .portfolio-layer h4 {
   font-size: 3rem;

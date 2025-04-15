@@ -275,6 +275,7 @@ color: var(--bg-color);
   overflow: hidden;
   display: flex;
   height: auto;
+  flex-direction: column;
   width: 100%;
 }
 

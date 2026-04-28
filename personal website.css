@@ -593,6 +593,30 @@ span {
     text-align: center;
     gap: 1.5rem;
   }
+  /* Remove bullet points from Skills section */
+.services-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Home section spacing */
+.home-content h1 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.home-content .text-animate {
+  margin-bottom: 3rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.btn-box {
+  margin-top: 2rem;
+}
 }
 
 /* ---------- Small Mobile (480px and below) ---------- */
@@ -681,4 +705,30 @@ span {
   .footer {
     padding: 2rem 5%;
   }
+  
+/* Remove bullet points from Skills section */
+.services-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Even more spacing on small phones */
+.home-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+
+.home-content .text-animate {
+  margin-bottom: 4rem;
+}
+
+.home-content p {
+  font-size: 1.4rem;
+  margin-bottom: 5rem;
+}
+
+.btn-box {
+  margin-top: 3rem;
+}
 }

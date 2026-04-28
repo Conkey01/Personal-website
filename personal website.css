@@ -688,12 +688,12 @@ ul {
   .btn-box {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 2rem;
     margin: 0 auto;
   }
 
   .btn-box .btn {
-    width: 100%;
+    width: 80%;
     max-width: 25rem;
     height: 4.5rem;
     font-size: 1.5rem;

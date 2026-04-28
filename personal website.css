@@ -564,7 +564,7 @@ ul {
     width: 100%;
     max-width: 34.5rem;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     height: auto;
     justify-content: center;
     margin: 0 auto;
@@ -693,7 +693,7 @@ ul {
   }
 
   .btn-box .btn {
-    width: 80%;
+    width: 100%;
     max-width: 25rem;
     height: 4.5rem;
     font-size: 1.5rem;

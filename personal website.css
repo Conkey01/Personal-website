@@ -599,14 +599,22 @@ span {
   padding-left: 0;
 }
 
-/* Home section spacing */
+/* Push home content down towards centre */
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+
 .home-content h1 {
   font-size: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .home-content .text-animate {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .home-content p {
@@ -712,15 +720,23 @@ span {
   padding-left: 0;
 }
 
-/* Even more spacing on small phones */
+/* Push home content down towards centre */
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
 .home-content h1 {
   font-size: 3.2rem;
   line-height: 1.4;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .home-content .text-animate {
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .home-content p {

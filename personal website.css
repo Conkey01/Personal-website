@@ -114,9 +114,7 @@ section{
   animation-delay: 2s;
 }
 
-
 .home-content .text-animate h3::before {
-  /*content: '';*/
   position: absolute;
   top: 0;
   left: 0;
@@ -124,8 +122,6 @@ section{
   height: 100%;
   border-right: 2px solid var(--main-color);
   z-index: -1;
-  /*animation: homeCursorText 6s linear infinite;
-  animation-delay: 2s;*/
 }
 
 .home-content p {
@@ -173,7 +169,7 @@ section{
 }
 
 .btn-box .btn:nth-child(2):hover {
-color: var(--bg-color);
+  color: var(--bg-color);
 }
 
 .btn-box .btn:nth-child(2)::before {
@@ -224,7 +220,6 @@ color: var(--bg-color);
   color: var(--bg-color);
 }
 
-
 .home-sci a::before {
   content: '';
   position: absolute;
@@ -240,16 +235,6 @@ color: var(--bg-color);
 .home-sci a:hover::before {
   width: 100%;
 }
-
-/*.about {
-  display: flex;
-  justify-content: center;
-  align-items: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background: var(--second-bg-color);
-  padding-bottom: 6rem;
-}*/
 
 /*--------  Projects CSS   ----------*/
 
@@ -338,6 +323,7 @@ color: var(--bg-color);
   font-size: 2rem;
   color: var(--second-bg-color);
 }
+
 /*-----------  Services CSS  ----------------*/
 
 .btn2 {
@@ -394,7 +380,7 @@ span {
 }
 
 .services-box h3 {
-font-size: 3.3rem;
+  font-size: 3.3rem;
 }
 
 .services-box p, ul {
@@ -477,16 +463,13 @@ font-size: 3.3rem;
   color: var(--second-bg-color);
 }
 
-
 /* Keyframes animation*/
 @keyframes homeBgText {
   0%,
   10%, 
   100% {
     background-position: -60rem 0;
-    
   }
-
   65%,
   85% {
     background-position: 0 0;
@@ -494,27 +477,208 @@ font-size: 3.3rem;
 }
 
 
+/* ============================================
+   RESPONSIVE / MOBILE STYLES
+   ============================================ */
 
-/*@keyframes homeCursorText {
-  
-  0%,
-  10%, 
-  100% {
-    width: 0;
+/* ---------- Tablet (768px and below) ---------- */
+@media (max-width: 768px) {
+
+  /* Show hamburger menu icon */
+  #menu-icon {
+    display: block;
   }
 
-  65%,
-  78%,
-  85% {
-    width: 47%;
-    opacity: 1;
+  /* Mobile nav: hidden by default, toggled via JS */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background: var(--second-bg-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    transition: .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  75%,
-  81% {
-    opacity: 0;
+  .navbar.active {
+    left: 0;
   }
 
-}*/
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+    margin-left: 0;
+  }
 
+  /* Home section */
+  .home-content h1 {
+    font-size: 4rem;
+  }
 
+  .text-animate {
+    width: 100%;
+  }
+
+  .home-content .text-animate h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-content p {
+    font-size: 1.5rem;
+  }
+
+  .btn-box {
+    width: 100%;
+    max-width: 34.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    height: auto;
+    justify-content: center;
+  }
+
+  .btn-box .btn {
+    width: 14rem;
+    height: 4.5rem;
+    font-size: 1.6rem;
+  }
+
+  .home-sci {
+    position: relative;
+    bottom: auto;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  /* Portfolio grid: 2 columns on tablet */
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 1.2rem;
+  }
+
+  /* Headings */
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  /* Services */
+  .services-container .services-box {
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  .services-box h3 {
+    font-size: 2.6rem;
+  }
+
+  /* Contact */
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- Small Mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 8rem 5% 2rem;
+  }
+
+  .header {
+    padding: 2rem 5%;
+  }
+
+  .home-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.4;
+  }
+
+  .home-content .text-animate h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 3rem;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .btn-box .btn {
+    width: 100%;
+    max-width: 25rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* Portfolio grid: 1 column on small phones */
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-container .portfolio-box {
+    height: 22rem;
+  }
+
+  .portfolio-layer {
+    padding: 0 2rem;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 2rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 1.2rem;
+  }
+
+  /* Headings */
+  .heading {
+    font-size: 3rem;
+  }
+
+  /* Services */
+  .services-box h3 {
+    font-size: 2.2rem;
+  }
+
+  .services-box i {
+    font-size: 5rem;
+  }
+
+  .services-container .services-box {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 5%;
+  }
+}

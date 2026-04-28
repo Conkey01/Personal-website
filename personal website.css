@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +20,7 @@
   --main-color2: #0ef;
 }
 
-html{
+html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -30,11 +30,13 @@ body {
   color: var(--text-color);
 }
 
-.header{
+/* ============ HEADER ============ */
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   padding: 2rem 9%;
   background: transparent;
   display: flex;
@@ -48,7 +50,7 @@ body {
   margin: 0 0 0 15px;
 }
 
-.logo{
+.logo {
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
@@ -73,12 +75,16 @@ body {
   display: none;
 }
 
-section{
+/* ============ SECTIONS (GENERAL) ============ */
+
+section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
 
-.home {
+/* ============ HOME ============ */
+
+.Home {
   display: flex;
   align-items: center;
   padding: 0 9%;
@@ -159,6 +165,7 @@ section{
 .btn-box .btn:hover {
   color: var(--main-color);
 }
+
 .btn:hover {
   color: var(--main-color);
 }
@@ -175,6 +182,7 @@ section{
 .btn-box .btn:nth-child(2)::before {
   background: var(--main-color);
 }
+
 .btn-box .btn::before {
   content: '';
   position: absolute;
@@ -236,14 +244,14 @@ section{
   width: 100%;
 }
 
-/*--------  Projects CSS   ----------*/
+/* ============ PORTFOLIO / PROJECTS ============ */
 
 .portfolio {
   background: var(--second-bg-color);
 }
 
 .portfolio h2 {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .portfolio-container {
@@ -283,7 +291,7 @@ section{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,.1), var(--main-color2));
+  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color2));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,7 +332,7 @@ section{
   color: var(--second-bg-color);
 }
 
-/*-----------  Services CSS  ----------------*/
+/* ============ SERVICES / SKILLS ============ */
 
 .btn2 {
   display: inline-block;
@@ -383,12 +391,13 @@ span {
   font-size: 3.3rem;
 }
 
-.services-box p, ul {
+.services-box p,
+ul {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
 
-/*------ Contact CSS ------*/
+/* ============ CONTACT ============ */
 
 .contact h2 {
   margin-bottom: 3rem;
@@ -431,6 +440,8 @@ span {
   cursor: pointer;
 }
 
+/* ============ FOOTER ============ */
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -463,10 +474,11 @@ span {
   color: var(--second-bg-color);
 }
 
-/* Keyframes animation*/
+/* ============ KEYFRAMES ============ */
+
 @keyframes homeBgText {
   0%,
-  10%, 
+  10%,
   100% {
     background-position: -60rem 0;
   }
@@ -477,19 +489,17 @@ span {
 }
 
 
-/* ============================================
-   RESPONSIVE / MOBILE STYLES
-   ============================================ */
+/* =============================================
+   RESPONSIVE — TABLET (768px and below)
+   ============================================= */
 
-/* ---------- Tablet (768px and below) ---------- */
 @media (max-width: 768px) {
 
-  /* Show hamburger menu icon */
+  /* --- Header / Nav --- */
   #menu-icon {
     display: block;
   }
 
-  /* Mobile nav: hidden by default, toggled via JS */
   .navbar {
     position: absolute;
     top: 100%;
@@ -497,7 +507,7 @@ span {
     width: 100%;
     padding: 1rem 4%;
     background: var(--second-bg-color);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     transition: .3s ease;
     display: flex;
     flex-direction: column;
@@ -515,13 +525,30 @@ span {
     margin-left: 0;
   }
 
-  /* Home section */
+  /* --- Home Section: vertically centre everything --- */
+  .Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 9%;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .home-content h1 {
     font-size: 4rem;
+    margin-bottom: 0.5rem;
   }
 
   .text-animate {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   .home-content .text-animate h3 {
@@ -530,6 +557,7 @@ span {
 
   .home-content p {
     font-size: 1.5rem;
+    margin: 1rem 0 4rem;
   }
 
   .btn-box {
@@ -539,6 +567,7 @@ span {
     gap: 1.5rem;
     height: auto;
     justify-content: center;
+    margin: 0 auto;
   }
 
   .btn-box .btn {
@@ -554,7 +583,7 @@ span {
     justify-content: center;
   }
 
-  /* Portfolio grid: 2 columns on tablet */
+  /* --- Portfolio: 2 columns --- */
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -568,12 +597,18 @@ span {
     font-size: 1.2rem;
   }
 
-  /* Headings */
+  /* --- Headings --- */
   .heading {
     font-size: 3.5rem;
   }
 
-  /* Services */
+  /* --- Skills: remove bullet points --- */
+  .services-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /* --- Services --- */
   .services-container .services-box {
     padding: 2.5rem 2rem 3rem;
   }
@@ -582,52 +617,24 @@ span {
     font-size: 2.6rem;
   }
 
-  /* Contact */
+  /* --- Contact --- */
   .contact form .input-box input {
     width: 100%;
   }
 
-  /* Footer */
+  /* --- Footer --- */
   .footer {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
   }
-  /* Remove bullet points from Skills section */
-.services-box ul {
-  list-style: none;
-  padding-left: 0;
 }
 
-/* Push home content down towards centre */
-.Home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding-top: 8rem;
-}
 
-.home-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
+/* =============================================
+   RESPONSIVE — SMALL MOBILE (480px and below)
+   ============================================= */
 
-.home-content .text-animate {
-  margin-bottom: 1.5rem;
-}
-
-.home-content p {
-  font-size: 1.5rem;
-  margin-bottom: 4rem;
-}
-
-.btn-box {
-  margin-top: 5rem;
-}
-}
-
-/* ---------- Small Mobile (480px and below) ---------- */
 @media (max-width: 480px) {
 
   html {
@@ -642,9 +649,31 @@ span {
     padding: 2rem 5%;
   }
 
+  /* --- Home Section: vertically centre everything --- */
+  .Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 5%;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .home-content h1 {
     font-size: 3.2rem;
     line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-animate {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .home-content .text-animate h3 {
@@ -653,13 +682,14 @@ span {
 
   .home-content p {
     font-size: 1.4rem;
-    margin: 1.5rem 0 3rem;
+    margin: 1rem 0 4rem;
   }
 
   .btn-box {
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
+    margin: 0 auto;
   }
 
   .btn-box .btn {
@@ -669,7 +699,14 @@ span {
     font-size: 1.5rem;
   }
 
-  /* Portfolio grid: 1 column on small phones */
+  .home-sci {
+    position: relative;
+    bottom: auto;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  /* --- Portfolio: 1 column --- */
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -691,12 +728,18 @@ span {
     font-size: 1.2rem;
   }
 
-  /* Headings */
+  /* --- Headings --- */
   .heading {
     font-size: 3rem;
   }
 
-  /* Services */
+  /* --- Skills: remove bullet points --- */
+  .services-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /* --- Services --- */
   .services-box h3 {
     font-size: 2.2rem;
   }
@@ -709,42 +752,8 @@ span {
     padding: 2rem 1.5rem 3rem;
   }
 
-  /* Footer */
+  /* --- Footer --- */
   .footer {
     padding: 2rem 5%;
   }
-  
-/* Remove bullet points from Skills section */
-.services-box ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* Push home content down towards centre */
-.Home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding-top: 6rem;
-}
-
-.home-content h1 {
-  font-size: 3.2rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-}
-
-.home-content .text-animate {
-  margin-bottom: 1.5rem;
-}
-
-.home-content p {
-  font-size: 1.4rem;
-  margin-bottom: 5rem;
-}
-
-.btn-box {
-  margin-top: 5rem;
-}
 }
